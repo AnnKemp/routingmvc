@@ -34,3 +34,24 @@ class ChangeNameController extends AbstractController
     }
 
 }
+
+// this is the link to the sessions-page : https://symfony.com/doc/current/components/http_foundation/sessions.html
+/*// here an example of how to deploy it, you have to make a new object: new Session(); on each page you want to use a value out of te session (get) or change a value out of a session (get)
+
+use Symfony\Component\HttpFoundation\Session\Session;
+
+$session = new Session();
+$session->start();
+
+// set and get session attributes
+$session->set('name', 'Drak');
+$session->get('name');
+
+// set flash messages
+$session->getFlashBag()->add('notice', 'Profile updated');
+
+// retrieve messages
+foreach ($session->getFlashBag()->get('notice', []) as $message) {
+    echo '<div class="flash-notice">'.$message.'</div>';
+}
+*/
