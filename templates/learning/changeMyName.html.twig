@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}Change your name{% endblock %}
 
 {% block body %}
 <style>
@@ -9,15 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ usernaame }}! ✅</h1>
+    <h1>Hello {{ username }}! ✅</h1>
 
-    THIS IS THE ABOUT PAGINA:
-    <form method="post" action="LearningController.php">
-        <p> Please add your name here :</p>
-        <input type="text" name="username">
+    THIS IS THE ChangeMyName PAGINA :
+    <!-- path('showName verwijst naar zo'n grijs routerpad op de Controller page en stuurt u zo door naar de juiste pagina')-->
+    <form method="post" action="{{ path('change-name')}}">
+        <label for="username"> Please add your name here :</label>
+        <input type="text" name="username" id="username" require>
         <input type="submit" name="submit">
     </form>
-
     <ul>
         <li>Your controller at <code><a href="{{ '/var/www/routingmvc/src/Controller/LearningController.php'|file_link(0) }}">src/Controller/LearningController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/var/www/routingmvc/templates/learning/index.html.twig'|file_link(0) }}">templates/learning/index.html.twig</a></code></li>

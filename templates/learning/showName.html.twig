@@ -1,26 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Change your name{% endblock %}
+{% block title %}Show my name{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-    {% endblock %}
-<div class="example-wrapper">
-    <h1>Hello {{ usernaame }}! ✅</h1>
-
-    THIS IS THE ChangeMyName PAGINA :
-    <!-- form method="post" action="{{ path('showName')}}" komt van Wolf uitleg vragen-->
-    <form method="post" action="LearningController.php">
-        <label for="username"> Please add your name here :</label>
-        <input type="text" name="username" id="username" requirde>
-        <input type="submit" name="submit">
-    </form>
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/routingmvc/src/Controller/LearningController.php'|file_link(0) }}">src/Controller/LearningController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/routingmvc/templates/learning/index.html.twig'|file_link(0) }}">templates/learning/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <h1>Hello {{ username }} </h1>
 {% endblock %}

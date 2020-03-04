@@ -14,6 +14,7 @@
         <p>{{ lorem }}</p>
     This friendly message is coming from: {{ name }}
     <ul>
+        <li><a href="{{ path('aboutme') }}">go to about page </a></li>
         <li>Your controller at <code><a href="{{ '/var/www/routingmvc/src/Controller/LearningController.php'|file_link(0) }}">src/Controller/LearningController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/var/www/routingmvc/templates/learning/index.html.twig'|file_link(0) }}">templates/learning/index.html.twig</a></code></li>
     </ul>
